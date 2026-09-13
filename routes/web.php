@@ -22,10 +22,6 @@ use App\Http\Controllers\SubscriberController;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('index');
-    Route::get('/index2', 'index2')->name('index2');
-    Route::get('/index3', 'index3')->name('index3');
-    Route::get('/index4', 'index4')->name('index4');
-    Route::get('/index5', 'index5')->name('index5');
     Route::get('/about', 'about')->name('about');
     Route::get('/contact', 'contact')->name('contact');
     Route::get('/services', 'services')->name('services');

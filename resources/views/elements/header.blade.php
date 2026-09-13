@@ -32,10 +32,6 @@
 										<a href="#">Home</a>
 										<ul class="sub-menu">
 											<li><a href="{{ route('index') }}">Home 01</a></li>
-											<li><a href="{{ route(('index2')) }}">Home 02</a></li>
-											<li><a href="{{ route(('index3')) }}">Home 03</a></li>
-											<li><a href="{{ route(('index4')) }}">Home 04</a></li>
-											<li><a href="{{ route(('index5')) }}">Home 05</a></li>
 										</ul>
 									</li> --}}
 									<li>
