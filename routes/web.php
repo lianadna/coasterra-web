@@ -10,6 +10,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\SubscriberController;
+use App\Http\Controllers\SitemapController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +46,8 @@ Route::controller(PagesController::class)->group(function () {
     Route::get('/volunteer', 'volunteer')->name('volunteer');
     Route::get('/volunteer-details/{volunteer?}', 'volunteerDetails')->name('volunteerDetails');
 });
+
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
 // Forms submitted by visitors
 Route::post('/contact', [ContactController::class, 'store'])
