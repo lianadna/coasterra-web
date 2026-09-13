@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /index2
-Disallow: /index3
-Disallow: /index4
-Disallow: /index5
+Disallow:
+
+Sitemap: https://coasterra.co/sitemap.xml
