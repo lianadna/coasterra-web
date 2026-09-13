@@ -30,13 +30,13 @@ class AdminAuthTest extends TestCase
 
         $response = $this->post('/login', [
             'email' => 'admin@gmail.com',
-            'password' => '12345678',
+            'password' => env('ADMIN_PASSWORD'),
         ]);
 
         $response->assertRedirect(route('dashboard'));
         $this->assertAuthenticated();
     }
-
+    
     public function test_login_fails_with_wrong_password(): void
     {
         $this->admin();
