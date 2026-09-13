@@ -8,16 +8,19 @@ use Illuminate\Support\Facades\Hash;
 
 class AdminSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
+        $password = env('ADMIN_PASSWORD');
+
+        if (empty($password)) {
+            throw new \RuntimeException('ADMIN_PASSWORD is not set.');
+        }
+
         User::firstOrCreate(
             ['email' => 'admin@gmail.com'],
             [
                 'name' => 'Admin',
-                'password' => Hash::make('12345678'),
+                'password' => Hash::make($password),
             ]
         );
     }
