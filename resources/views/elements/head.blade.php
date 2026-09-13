@@ -3,7 +3,27 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
-	<title>Coasterra</title>
+	@php
+		$pageTitle = trim($__env->yieldContent('title', 'Coasterra | Coastal Climate Solutions'));
+		$pageDescription = trim($__env->yieldContent(
+			'meta_description',
+			'Coasterra menghadirkan solusi berbasis alam untuk mendukung keberlanjutan kawasan pesisir Indonesia.'
+		));
+		$ogTitle = trim($__env->yieldContent('og_title', $pageTitle));
+		$ogDescription = trim($__env->yieldContent('og_description', $pageDescription));
+		$ogImage = trim($__env->yieldContent('og_image', asset('assets/img/template/people.png')));
+		$ogUrl = trim($__env->yieldContent('og_url', url()->current()));
+	@endphp
+
+	<title>{{ $pageTitle }}</title>
+	<meta name="description" content="{{ $pageDescription }}"/>
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="{{ $ogTitle }}"/>
+	<meta property="og:description" content="{{ $ogDescription }}"/>
+	<meta property="og:image" content="{{ $ogImage }}"/>
+	<meta property="og:url" content="{{ $ogUrl }}"/>
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/template/favicon.svg') }}"/>
