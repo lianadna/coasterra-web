@@ -1,5 +1,8 @@
 @extends('layout.layout')
 
+@section('title', 'Tentang Kami | Coasterra')
+@section('meta_description', "Kenali Coasterra, visi, misi, dan perjalanan kami dalam menghadirkan solusi berkelanjutan untuk kawasan pesisir Indonesia.")
+
 @php
     $title='About Us';
     $subTitle='Who We Are';

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+	@section('title', 'Coasterra | Coastal Climate Solutions')
+	@section('meta_description', "Coasterra menghadirkan solusi berbasis alam untuk mendukung ketahanan dan keberlanjutan kawasan pesisir Indonesia.")
     @include('elements.head')
 	
 <body>

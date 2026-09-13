@@ -1,5 +1,8 @@
 @extends('layout.layout')
 
+@section('title', 'Galeri Blog | Coasterra')
+@section('meta_description', "Jelajahi artikel blog Coasterra - kabar dan cerita dari program konservasi pesisir dan relawan kami.")
+
 @php
     $title='Blog Grid';
     $subTitle='Blog Grid';

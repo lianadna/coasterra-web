@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+	@section('title', 'Layanan Kami | Coasterra')
+	@section('meta_description', "Temukan berbagai layanan dan solusi Coasterra untuk mendukung keberlanjutan dan ketahanan kawasan pesisir Indonesia.")
     @include('elements.head')
 
 <body>

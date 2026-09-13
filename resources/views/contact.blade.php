@@ -1,5 +1,8 @@
 @extends('layout.layout')
 
+@section('title', 'Hubungi Kami | Coasterra')
+@section('meta_description', "Hubungi Coasterra untuk kerja sama, donasi, atau pertanyaan seputar program kami.")
+
 @php
     $title='Contact Us';
     $subTitle='Contact Us';

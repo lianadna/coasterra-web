@@ -1,5 +1,9 @@
 @extends('layout.layout')
 
+@section('title', ($blog?->title ? $blog->title . ' - Coasterra' : 'Detail Blog | Coasterra'))
+@section('meta_description', \Illuminate\Support\Str::limit(strip_tags((string) ($blog?->description ?? '')), 155, '...') ?: "Baca cerita lengkapnya di blog Coasterra, seputar program konservasi pesisir dan komunitas kami.")
+@section('og_image', $blog?->image ? \Illuminate\Support\Facades\Storage::url($blog->image) : asset('assets/img/template/people.png'))
+
 @php
     $title='Blog Details';
     $subTitle='Blog Details';
